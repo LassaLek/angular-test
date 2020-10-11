@@ -19,10 +19,14 @@ Pro snazší orientaci jsou na klíčových místech vložena TODOs. Změny jsou
 # InterviewTest
 
 steps to start:
-git clone git@github.com:LassaLek/angular-test.git
-cd /angular-test
-npm install
-ng serve
+
+`git clone git@github.com:LassaLek/angular-test.git`
+
+`cd /angular-test`
+
+`npm install`
+
+`ng serve`
 
 
 ## Development server
