@@ -8,7 +8,7 @@
     Při stisku tlačítka *reveal-button* (text __Show editor__) se objeví componenta *Editor*. Upravte v *app.component.ts* Angular animaci, pro objevení/skrytí komponenty.
     
     3) __přestylovat [JSON Editor](https://github.com/json-editor/json-editor)__
-    Po stisku tlačítka *reveal-button* (text __Show editor__) zobrazená componenta *Editor* pouzívá set stylů Spectre. (*index.html* & *editor.component.scss*) Ten stylově neodpovídá [CEOS Data](https://www.ceosdata.com/). Upravte stylování *Editoru* aby více odpovídala stylu a konciztenci [CEOS Data](https://www.ceosdata.com/). Ať už přepsáním v aplikaci (*editor.component.scss*) nebo úpravou stylů spectre (*index.html*)
+    Po stisku tlačítka *reveal-button* (text __Show editor__) zobrazená componenta *Editor* pouzívá set stylů Spectre. (*index.html* & *editor.component.scss*) Ten stylově neodpovídá [CEOS Data](https://www.ceosdata.com/). Upravte stylování *Editoru* aby více odpovídala stylu a konzistenci [CEOS Data](https://www.ceosdata.com/). Ať už přepsáním v aplikaci (*editor.component.scss*) nebo úpravou stylů spectre (*index.html*)
 
     
 pozn: 
