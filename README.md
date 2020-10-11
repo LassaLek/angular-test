@@ -1,6 +1,19 @@
 # TODOs
-1) Zkopírovat pro
+1) Do projektu přidat branch `interview-michal` ve které bude ukázka kódu
+    1) __upravit direktivu *appHoverEffect* a komponentu *reveal-button*__
+    
+    Na hlavní stánce se nachází tlačítko *reveal-button* (text __Show editor__) s directivou *appHoverEffect*, která nastavuje jeho chování při najetí na tlačítko. Upravte direktivu *hover-effect.directive.ts* a komponentu *reveal-button.component.scss* aby stylově co nejvíce odpovídala a byla konzistentní se stylem stránky
+    [CEOS Data](https://www.ceosdata.com/) 
+    2)  __přidat animaci při togglu *editor-component*__
+    
+    Při stisku tlačítka *reveal-button* (text __Show editor__) se objeví componenta *Editor*. Upravte v *app.component.ts* Angular animaci, pro objevení/skrytí komponenty.
+    3) __přestylovat [JSON Editor](https://github.com/json-editor/json-editor)__
+    
+    Po stisku tlačítka *reveal-button* (text __Show editor__) zobrazená componenta *Editor* pouzívá set stylů Spectre. (*index.html* & *editor.component.scss*) Ten stylově neodpovídá [CEOS Data](https://www.ceosdata.com/). Upravte stylování *Editoru* aby více odpovídala stylu a konciztenci [CEOS Data](https://www.ceosdata.com/). Ať už přepsáním v aplikaci (*editor.component.scss*) nebo úpravou stylů spectre (*index.html*)
 
+    
+pozn: 
+Pro snazší orientaci jsou na klíčových místech vložena TODOs. Změny jsou povoleny naprosto kdekoliv, TODOs vyskytující se v kódu jsou pouze návodné, nikoliv svazující. 
 
 
 
