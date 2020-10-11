@@ -18,7 +18,12 @@ Pro snazší orientaci jsou na klíčových místech vložena TODOs. Změny jsou
 
 # InterviewTest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+steps to start:
+git clone git@github.com:LassaLek/angular-test.git
+cd /angular-test
+npm install
+ng serve
+
 
 ## Development server
 
