@@ -47,7 +47,8 @@ export class EditorComponent implements OnInit {
     const jsonEditor = new JSONEditor(document.getElementById('editor'), {
       theme: 'spectre',
       schema: schema,
-      disable_edit_json: true,
+      disable_edit_json: false,
+      iconlib: "spectre",
     });
     jsonEditor.setValue({
       "fruits": [ "apple", "orange", "pear" ],
