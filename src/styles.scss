@@ -1,1 +1,237 @@
 /* You can add global styles to this file, and also import other style files */
+
+$ceos-yellow: #fdc500;
+$ceos-green: #53af31;
+$ceos-pinkish: #e4013a;
+$ceos-magenta: #482583;
+$ceos-blue: #0f70b7;
+$fg-color: lighten(#000, 12%);
+$fg-color-light: #fff;
+
+
+@mixin rounded($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin transform($property) {
+	-webkit-transform: $property;
+	-ms-transform: $property;
+	transform: $property;
+}
+@mixin shadow($box-shadow...) {
+	-webkit-box-shadow:$box-shadow;
+	-moz-box-shadow:$box-shadow;
+	box-shadow:$box-shadow;
+}
+@mixin transition($transition...) {
+	-webkit-transition:$transition;
+	-moz-transition:$transition;
+	-ms-transition:$transition;
+	transition:$transition;
+}
+input[type="text"] , select.form-select {
+	@include rounded(4px);
+	outline: 0;
+	border: 1px solid #bbb;
+	height: 22px !important;
+	padding: 3px 14px !important;
+	font-size: 14px;
+	@include transition(all 1500ms);
+	&:hover {
+		border: 1px solid darken($ceos-blue, 10%);
+		background: rgba($ceos-blue, .05);
+		@include transition(all 300ms);
+	}
+}
+.btn {
+	@include rounded(4px);
+	@include transition(all 300ms);
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	margin: 2px;
+	&:first-of-type {margin-left: 0px}
+	&:last-of-type {margin-right: 0px}
+	&.btn-sm {
+  		height: 30px;
+  		padding: 0 10px;
+	}
+  	&.btn-xl {
+  		line-height: 50px;
+  		padding: 0 30px;
+  		@include rounded(25px);
+  	}
+  	&.btn-primary {
+  		color: lighten($fg-color, 20%);
+  		i {
+  			margin-right: 8px;
+  		}
+  		&:hover {
+  			background: #fcfcfc; 
+  		}
+  	}
+  	&.btn-je {
+    	background: $ceos-pinkish;
+	    color: $fg-color-light;
+	    border: 3px solid transparent;
+	    svg {
+	    	fill: #fff;
+	    	position: relative;
+	    	top: 6px;
+	    	left: -10px;
+	    	margin-left: 5px; 
+	    }
+	}
+}
+h4.je-object__title {
+	font-size: 24px !important;
+}
+p {
+	margin-left: 14px;
+}
+.editor__container {
+	width: 1000px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+.je-object__container {
+	background: transparent !important;
+	color: $fg-color;
+	h4 {
+		display: flex !important;
+		margin: 0;
+		line-height: 40px;
+		margin-bottom: 10px;
+		font-size: 16px; 	
+		label {
+			order: 1;
+			display: block;
+			width: 100%;
+			flex-basis: auto;
+			margin-left: 14px !important;
+		}
+		button {
+			order: 2;
+			transform: scaleY(-1);
+			display: block;
+			width: 30px !important;
+			height: 30px !important;
+			padding: 0 0 0 6px !important;
+			@include rounded(50%);
+			background: #ddd;
+			margin: 3px 14px 0 0 !important;		
+		}
+		span {
+			display: none;
+		}
+		&:first-of-type {
+			border-bottom: 1px solid #ddd;
+		}
+	}
+	label {
+		.je-label {
+			padding: 4px 8px;
+		}
+	}
+	.je-object__controls {
+		margin: 0;
+	}
+	span + div[style^="d"] {
+		display: block !important;
+		height: 0;
+		clear: both;
+	}
+	.btn-group {
+		margin-left: 14px;
+		&[style^="d"] {
+			display: flex !important;	
+			justify-content: flex-end; 
+			background: #f1f1f1 !important;
+			padding: 4px 14px;
+			position: relative;
+			bottom: -3px;
+			margin-left: 0px;
+			.json-editor-btn-add {
+				margin-right: auto !important;
+			}
+			.btn {
+				border: 1px solid darken(#f1f1f1, 20%);
+			}
+		}
+		&.je-object__controls {
+			position: relative;
+			top: -50px;
+			left: -70px;
+			float: right;
+			margin-bottom: -43px;
+		}
+	}
+	.je-panel {
+		padding: 3px 0 !important;
+		margin: 0 !important;
+		background: transparent !important;
+		.container {
+			padding: 0 !important;
+			margin: 0 !important;
+			.columns {
+				padding: 0px !important;
+				margin: 0 !important;
+				@include rounded(6px);
+				margin: 4px 0 !important;
+				background: url("assets/img/bg-hack.png") top center repeat-x !important;
+				.columns {
+					border: 0;
+					background: transparent !important;
+				}
+				h4.je-object__title {
+					font-size: 16px !important;
+					button {
+						background: lighten($fg-color, 80%) !important;
+						border: 1px solid lighten($fg-color, 60%);
+					}
+				}
+				.column {
+					&.col-12 {
+						background: transparent !important;
+						@include rounded(10px);
+						overflow: hidden;
+						padding: 6px 0 0 0 !important;
+						margin: 17px 0 !important;
+					}
+					.form-group {
+						display: grid;
+						grid-template-columns: 35% 65%;
+						grid-template-rows: auto auto;
+						padding: 0 14px;
+						margin-top: 3px;
+						margin-bottom: 7px;
+						label {
+							grid-column-start: 1;
+							grid-column-end: 2;
+							grid-row-start: 1;
+							grid-row-end: 2
+						}
+						input {
+							grid-column-start: 2;
+							grid-column-end: 3;
+							grid-row-start: 1;
+							grid-row-end: 2
+						}
+						p {
+							grid-column-start: 1;
+							grid-column-end: 3;
+							grid-row-start: 2;
+							grid-row-end: 3;
+							font-style: italic;
+							margin-left: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

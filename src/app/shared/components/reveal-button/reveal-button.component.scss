@@ -1,14 +1,33 @@
 
-/*TODO změnit stylování buttonu*/
-button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+$ceos-yellow: #fdc500;
+$ceos-green: #53af31;
+$ceos-pinkish: #e4013a;
+$ceos-magenta: #482583;
+$ceos-blue: #0f70b7;
+
+@mixin shadow($box-shadow...) {
+  -webkit-box-shadow:$box-shadow;
+  -moz-box-shadow:$box-shadow;
+  box-shadow:$box-shadow;
+}
+@mixin transition($transition...) {
+  -webkit-transition:$transition;
+  -moz-transition:$transition;
+  -ms-transition:$transition;
+  transition:$transition;
+}
+.btn-je {
+  @include transition(all 500ms);
+  margin-bottom: 10px;
   font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  background-color: #1976d2;
+  text-shadow: darken($ceos-pinkish, 40%) 0 1px 0;
+  &.hover {
+    background: darken($ceos-pinkish, 20%);
+    @include shadow(0px 0px 10px 0px rgba($ceos-pinkish, .5));
+    @include transition(all 200ms);
+    border: 3px solid #fff;
+    span, svg {
+      opacity: .85; 
+    }
+  }
 }
