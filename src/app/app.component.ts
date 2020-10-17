@@ -13,13 +13,15 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
         transition(
           ':enter',
           [
-            /*TODO přidat animaci při objevení Editor elementu */
+            /* animace na miste praveho postranniho panelu */
+            style({transform: 'translateX(+100%)', opacity: '0'}),
+            animate('350ms cubic-bezier(0.785, 0.135, 0.150, 0.860)', style({transform: 'translateX(0%)', opacity: '1'}))
           ]
         ),
         transition(
           ':leave',
           [
-            /*TODO přidat animaci při zavření Editor elementu */
+            animate('350ms cubic-bezier(0.785, 0.135, 0.150, 0.860)', style({transform: 'translateX(+100%)', opacity: '0'}))
           ]
         )
       ]
