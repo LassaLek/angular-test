@@ -22,10 +22,13 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('interview-test');
   });
 
-  it('should render title', () => {
+  it('should toggle editor visibility', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('interview-test app is running!');
+    const app = fixture.debugElement.componentInstance;
+    expect(app.showEditor).toBe(false);
+    app.toggleEditor();
+    expect(app.showEditor).toBe(true);
+    app.toggleEditor();
+    expect(app.showEditor).toBe(false);
   });
 });
